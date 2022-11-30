@@ -1,0 +1,28 @@
+
+a
+java:S1301@"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•
+0
+java:S1220""Move this file to a named package.
+h
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Çµí‘
+Q
+java:S1854'";Remove this useless assignment to local variable "yearNum".(÷‘Æû
+F
+java:S4524"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(÷³á
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•õš¯
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ÎÊš‰
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(•õš¯
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(èœ¿™øÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S1065"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(Ò¤¬¼şÿÿÿÿ
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(òÜÆÂıÿÿÿÿ
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(ª»ôàıÿÿÿÿ
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(ƒßÑ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(¶ù¦
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(‡ÃŒÙøÿÿÿÿ
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(Õ”¾Üşÿÿÿÿ
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(Ë¿µîûÿÿÿÿ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(‘Ğ

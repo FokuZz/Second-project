@@ -1,0 +1,13 @@
+
+0
+java:S1220""Move this file to a named package.
+L
+java:S1153"1Directly append the argument of String.valueOf().(ˆâáÃıÿÿÿÿ
+o	java:S116"URename this field "is_expense" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Çß¢úÿÿÿÿ
+1
+java:S3626"Remove this redundant jump.(ûÁİ…
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÉÁ±
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‰ŒÙñ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(ùµÔ
+M
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ

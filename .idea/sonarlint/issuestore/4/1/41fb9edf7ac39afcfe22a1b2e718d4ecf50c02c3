@@ -1,0 +1,16 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Íûüÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+L
+java:S1153"1Directly append the argument of String.valueOf().(×àÀÀøÿÿÿÿ
+L
+java:S1153"1Directly append the argument of String.valueOf().(×àÀÀøÿÿÿÿ
+n	java:S116
+"TRename this field "item_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ”êÇşÿÿÿÿ
+o	java:S116"URename this field "is_expense" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Çß¢úÿÿÿÿ
+j	java:S116"URename this field "sum_of_one" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£°ÿŞ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÀæ¼
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(Ÿª€ûÿÿÿÿ
+I
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ
