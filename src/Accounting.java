@@ -37,7 +37,7 @@ public class Accounting {
                         }
                         break;
                     case (2):
-                        if (!year.is_expense.isEmpty()){ // Для отсутствия проблем
+                        if (!year.isExpense.isEmpty()){ // Для отсутствия проблем
                             System.out.println("Вы уже загрузили отчёт, для повторной загрузки необходимо перезапустить программу!\n");
                             break;
                         }
@@ -93,12 +93,12 @@ public class Accounting {
             return;
         }
         int errors =0; // Значение для подсчёта ошибок
-        for (int i = 0; i < year.is_expense.size(); i++){ //Масив который отталкивается от размера списка месячных трат
-            if (year.is_expense.get(i)) {        // Проверка является ли тратой число i. (у меня в каждом объекте отфильтрованы arrayList"ы и чтобы обратиться, нужно лишь 1 число т.е. I)
+        for (int i = 0; i < year.isExpense.size(); i++){ //Масив который отталкивается от размера списка месячных трат
+            if (year.isExpense.get(i)) {        // Проверка является ли тратой число i. (у меня в каждом объекте отфильтрованы arrayList"ы и чтобы обратиться, нужно лишь 1 число т.е. I)
                 int sumTrueExpenses = 0;
-                for (int o = 0; o < mouths.get(year.month.get(i) - 1).is_expense.size(); o++) { // Второй массив в котором мы будем плюсовать к сумме каждую трату, чтобы сверить.
-                    if (mouths.get(year.month.get(i) - 1).is_expense.get(o)) {                  // Не стал делать все месяцы сразу, чтобы была возможность увидеть в каком именно месяце трата отличается
-                        sumTrueExpenses += mouths.get(year.month.get(i) - 1).quantity.get(o) * mouths.get(year.month.get(i) - 1).sum_of_one.get(o);
+                for (int o = 0; o < mouths.get(year.month.get(i) - 1).isExpense.size(); o++) { // Второй массив в котором мы будем плюсовать к сумме каждую трату, чтобы сверить.
+                    if (mouths.get(year.month.get(i) - 1).isExpense.get(o)) {                  // Не стал делать все месяцы сразу, чтобы была возможность увидеть в каком именно месяце трата отличается
+                        sumTrueExpenses += mouths.get(year.month.get(i) - 1).quantity.get(o) * mouths.get(year.month.get(i) - 1).sumOfOne.get(o);
                     }                       // ^-- всё это такое сложное из-за того что я не знал как в цикле создать 3 разных объекта, и запихал их в эррейлист, так тоже хорошо работает, главное привыкнуть
                 }
                 if (!(sumTrueExpenses == year.amount.get(i))) {               // Условие, которое делает сверку, со следующим циклом все значения так сказать обнуляются
@@ -107,9 +107,9 @@ public class Accounting {
                 }
             } else {                            // Всё тоже самое но тут уже проверка заработка
                     int sumFalseExpenses = 0;
-                    for (int o = 0; o < mouths.get(year.month.get(i) - 1).is_expense.size(); o++) {
-                        if (!mouths.get(year.month.get(i) - 1).is_expense.get(o)) {
-                            sumFalseExpenses += mouths.get(year.month.get(i) - 1).quantity.get(o) * mouths.get(year.month.get(i) - 1).sum_of_one.get(o);
+                    for (int o = 0; o < mouths.get(year.month.get(i) - 1).isExpense.size(); o++) {
+                        if (!mouths.get(year.month.get(i) - 1).isExpense.get(o)) {
+                            sumFalseExpenses += mouths.get(year.month.get(i) - 1).quantity.get(o) * mouths.get(year.month.get(i) - 1).sumOfOne.get(o);
                         }
                     }
                     if (!(sumFalseExpenses == year.amount.get(i))) {
@@ -149,14 +149,14 @@ public class Accounting {
                     System.out.println("Март");
                     break;
             }
-            for (int y = 0;y < mouths.get(i).item_name.size();y++){
-                if (mouths.get(i).is_expense.get(y) && mostExpensive<(mouths.get(i).quantity.get(y)*mouths.get(i).sum_of_one.get(y))){ // Проверка является ли это тратой, и проверка является ли сумма больше чем сейчас
-                    mostExpensive = mouths.get(i).quantity.get(y)*mouths.get(i).sum_of_one.get(y);
-                    mostExpensiveName = mouths.get(i).item_name.get(y);
+            for (int y = 0;y < mouths.get(i).itemName.size();y++){
+                if (mouths.get(i).isExpense.get(y) && mostExpensive<(mouths.get(i).quantity.get(y)*mouths.get(i).sumOfOne.get(y))){ // Проверка является ли это тратой, и проверка является ли сумма больше чем сейчас
+                    mostExpensive = mouths.get(i).quantity.get(y)*mouths.get(i).sumOfOne.get(y);
+                    mostExpensiveName = mouths.get(i).itemName.get(y);
                 }
-                if (!mouths.get(i).is_expense.get(y) && mostProfitable<(mouths.get(i).quantity.get(y)*mouths.get(i).sum_of_one.get(y))){ // такая же проверка только заработка
-                    mostProfitable = mouths.get(i).quantity.get(y)*mouths.get(i).sum_of_one.get(y);
-                    mostProfitableName = mouths.get(i).item_name.get(y);
+                if (!mouths.get(i).isExpense.get(y) && mostProfitable<(mouths.get(i).quantity.get(y)*mouths.get(i).sumOfOne.get(y))){ // такая же проверка только заработка
+                    mostProfitable = mouths.get(i).quantity.get(y)*mouths.get(i).sumOfOne.get(y);
+                    mostProfitableName = mouths.get(i).itemName.get(y);
                 }
             }
             System.out.println("Самым прибыльным товаром был - "+mostProfitableName+" - "+mostProfitable+"р.");
@@ -171,8 +171,8 @@ public class Accounting {
             System.out.println("Для сверки отсутствует годовой отчёт!\n");
             return;
         }
-        int sumE =0;
-        int sumP =0;
+        int sumExpenses =0;
+        int sumProfit =0;
         printMenu("h");
         System.out.println("Информация за "+yearNum+" год.");
         for(Integer mouth: year.month){ // необходимо для получения номера месяца
@@ -191,16 +191,16 @@ public class Accounting {
                      break;
             }
         }
-        for (int i=0;i<year.is_expense.size();i++){
-            if (year.is_expense.get(i)){
-                sumE+=year.amount.get(i);
+        for (int i=0;i<year.isExpense.size();i++){
+            if (year.isExpense.get(i)){
+                sumExpenses+=year.amount.get(i);
             } else {
-                sumP+=year.amount.get(i);
+                sumProfit+=year.amount.get(i);
             }
         }
         System.out.println();
-        System.out.println("Средний расход за все месяцы в году ="+(sumE/(year.is_expense.size()/2))+"р."); // Выводим данные среднего значения.
-        System.out.println("Средний доход за все месяцы в году ="+(sumP/(year.is_expense.size()/2))+"р.");  // Мы заранее знаем что у каждого месяца есть 2 строчки, поэтому мы их делим
+        System.out.println("Средний расход за все месяцы в году ="+(sumExpenses/(year.isExpense.size()/2))+"р."); // Выводим данные среднего значения.
+        System.out.println("Средний доход за все месяцы в году ="+(sumProfit/(year.isExpense.size()/2))+"р.");  // Мы заранее знаем что у каждого месяца есть 2 строчки, поэтому мы их делим
         printMenu("h");
         System.out.println();
     }
@@ -209,9 +209,9 @@ public class Accounting {
         int profitableExpense = 0;
         for(int i=0;i<year.month.size();i++){ // Ищем подходящий year.mouth для того чтобы потом, найти внутри разные is_expense. Которые можно сверить
             boolean need = year.month.get(i).equals(mouth);
-            if (year.is_expense.get(i) && need){
+            if (year.isExpense.get(i) && need){
                 profitableExpense=year.amount.get(i);}
-            if (!year.is_expense.get(i) && need){
+            if (!year.isExpense.get(i) && need){
                 profitable=year.amount.get(i);
             }
         }

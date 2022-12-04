@@ -8,15 +8,15 @@ import java.util.List;
 public class YearlyReport {
     ArrayList<Integer> month = new ArrayList<>();
     ArrayList<Integer> amount = new ArrayList<>();
-    ArrayList<Boolean> is_expense = new ArrayList<>();
+    ArrayList<Boolean> isExpense = new ArrayList<>();
     void findYearlyReport(int year){//Метод ищет фаил, при нахождении сразу считывает, фильтрует по заданому примеру.
         try {
             List<String> files = Files.readAllLines(Path.of("y."+String.valueOf(year)+".csv"));// Собирает в массив List каждую линию с данными по типу blabla,blala,bla,
-            for (int i=1;i<files.size();i++){// Такой цикл нужен чтобы пропустить первую строку
+            for (int i=1;i<files.size();i++){// Такой цикл нужен, чтобы пропустить первую строку
                 String[] filteredFiles = files.get(i).split(","); // Делим строку по запятым и сохраняем в массив который сразу же фильтруем далее
                 month.add(Integer.parseInt(filteredFiles[0]));
                 amount.add(Integer.parseInt(filteredFiles[1]));
-                is_expense.add(Boolean.parseBoolean(filteredFiles[2]));
+                isExpense.add(Boolean.parseBoolean(filteredFiles[2]));
             }
         } catch (IOException e) {
             System.out.println("Невозможно прочитать файл с годовым отчётом. Возможно файл не находится в нужной директории.");
@@ -26,7 +26,7 @@ public class YearlyReport {
 
     }
     void showItem(int i){
-        System.out.println(month.get(i)+" "+amount.get(i)+" "+is_expense.get(i));
+        System.out.println(month.get(i)+" "+amount.get(i)+" "+isExpense.get(i));
     }
 
 
