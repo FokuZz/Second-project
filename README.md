@@ -1,4 +1,4 @@
-# H1 Yearly Financial Report #Java 
+# Yearly Financial Report #Java 
 Описание программы "Yearly Financial Report":
 
 Программа "Yearly Financial Report" позволяет создавать годовой финансовый отчет на основе месячных отчетов. Для работы программы необходимы месячные отчеты в формате CSV, которые содержат информацию о доходах и расходах за каждый месяц.
